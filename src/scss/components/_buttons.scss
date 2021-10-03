@@ -1,0 +1,54 @@
+.btn {
+  display: inline-block;
+  border: 0;
+  border-radius: 50px;
+  outline: none;
+  cursor: pointer;
+  
+  &-primary {
+    @include transition(button);
+    padding: 1.125rem 6rem;
+    background-image: color(gradient, 1);
+    background-size: 300% 100%;
+    
+    &:hover {
+      background-position: 100% 0;
+    }
+
+    @include breakpoint-down(mobile) {
+      padding: 1rem 4.75rem;
+    }
+  }
+
+  &-secondary {
+    @include transition(button);
+    border-radius: 0;
+    border-bottom: 1.5px solid color(accent, 1);
+
+    &:hover {
+      border-bottom: 1.5px solid color(neutral, 1);
+      color: color(neutral, 1);
+    }
+
+    &:hover .btn-icon {
+      margin-left: .25rem;
+      fill: color(neutral, 1);
+    }
+  }
+
+  &-form {
+    @include transition(button);
+    padding: 1.125rem 1.875rem;
+    background-image: color(gradient, 1);
+    background-size: 300% 100%;
+    
+    &:hover {
+      background-position: 100% 0;
+    }
+  }
+
+  &-icon {
+    @include transition(button);
+    fill: color(accent, 1);
+  }
+}

@@ -1,0 +1,163 @@
+// BASE
+// ----------------------------------------
+//
+body {
+  font-family: sans-serif;
+}
+
+h1, 
+h2, 
+h3, 
+h4 {
+  color: color(neutral, 1);
+  font-family: font-family(heading);
+  font-weight: font-weight(bold);
+}
+
+h1 {
+  @include font-size(h1, desktop);
+
+  @include breakpoint-down(mobile) {
+    @include font-size(h1, mobile);
+  }
+}
+
+h2 {
+  @include font-size(h2, desktop);
+
+  @include breakpoint-down(mobile) {
+    @include font-size(h2, mobile);
+  }
+}
+
+h3 {
+  @include font-size(h3, desktop);
+
+  @include breakpoint-down(mobile) {
+    @include font-size(h3, mobile);
+  }
+}
+
+p {
+  color: color(neutral, 1);
+  font-family: font-family(body);
+  font-weight: font-weight(regular);
+}
+
+a {
+  color: color(neutral, 1);
+}
+
+.text-small {
+  @include font-size(t-s, desktop);
+
+  @include breakpoint-down(mobile) {
+    @include font-size(t-s, mobile);
+  }
+}
+
+.text-regular {
+  @include font-size(t-r, desktop);
+
+  @include breakpoint-down(mobile) {
+    @include font-size(t-r, mobile);
+  }
+}
+
+.text-large {
+  @include font-size(t-l, desktop);
+
+  @include breakpoint-down(mobile) {
+    @include font-size(t-l, mobile);
+  }
+}
+
+
+
+// COMPONENTS
+// ----------------------------------------
+// 
+.btn {
+  color: color(neutral, 1);
+  font-family: font-family(button);
+  font-size: font-size(t-r, desktop);
+  font-weight: font-weight(bold);
+
+  &-secondary {
+    font-weight: font-weight(regular);
+    color: color(accent, 1);
+  }
+}
+
+.nav-link {
+  font-size: font-size(t-r, desktop);
+
+  @include breakpoint-down(mobile) {
+    font-size: .6875rem;
+  }
+}
+
+
+
+// LAYOUTS
+// ----------------------------------------
+//
+// Header
+.header {
+  .nav-link {
+    @include transition(text);
+    font-family: font-family(heading);
+
+    &:hover {
+      color: color(accent, 1);
+    }
+  }
+}
+
+
+// Testimonials
+.quote-text {
+  font-size: .9375rem;
+  line-height: 1.3125rem;
+
+  @include breakpoint-down(mobile) {
+    font-size: .5625rem;
+    line-height: 1rem;
+  }
+}
+
+.customer-name {
+  font-size: .75rem;
+  line-height: .875rem;
+
+  @include breakpoint-down(mobile) {
+    font-size: .625rem;
+    line-height: .75rem;
+  }
+}
+
+.customer-profession {
+  font-size: .5rem;
+  line-height: .625rem;
+
+  @include breakpoint-down(mobile) {
+    font-size: .4375rem;
+    line-height: .5rem;
+  }
+}
+
+// Footer
+.footer {
+  .nav-link {
+    @include transition(text);
+    font-family: font-family(body);
+
+    &:hover {
+      color: color(accent, 1);
+    }
+  }
+
+  &-attribution {
+    font-size: font-size(t-s, desktop);
+  }
+}

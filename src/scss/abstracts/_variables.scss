@@ -1,0 +1,69 @@
+// COLOR
+// ----------------------------------------
+//
+$color: (
+	primary: (
+		1: hsl(217, 28%, 15%),
+		2: hsl(218, 28%, 13%),
+		3: hsl(216, 53%, 9%),
+    4: hsl(219, 30%, 18%)
+ 	),
+ 	accent: (
+		1: hsl(176, 68%, 64%),
+		2: hsl(198, 60%, 50%),
+		3: hsl(0, 100%, 63%)
+ 	),
+  neutral: (
+    1: hsl(0, 0%, 100%),
+    2: hsl(0, 0%, 72%)
+  ),
+  gradient: (
+    1: linear-gradient(to right, hsl(176, 68%, 64%), hsl(198, 60%, 50%), hsl(176, 68%, 64%), hsl(176, 68%, 64%))
+  )
+);
+
+
+
+// FONT-FAMILY
+// ----------------------------------------
+//
+$font-family: (
+	heading:  '"Raleway", sans-serif',  // font-family(heading)
+  button:   '"Raleway", sans-serif',  // font-family(button)
+  body:     '"Open Sans", sans-serif' // font-family(body)
+);
+
+// FONT-SIZES
+// ----------------------------------------
+//
+$font-sizes: (
+  desktop: (
+    h1:     ( 2.5rem, 3.75rem, 0 ),  // H1
+    h2:     ( 2.5rem, 3rem, 0 ),     // H2
+    h3:     ( 2rem, 3rem, 0 ),       // H3
+    h4:     ( 1.25rem, 1.5rem, 0 ),  // H4
+    t-s:    ( .875rem, 1.25rem, 0 ), // Text Small
+    t-r:    ( 1rem, 1.5rem, 0 ),     // Text Regular
+    t-l:    ( 1.25rem, 2rem, 0 )     // Text Large
+  ),
+  mobile: (
+    h1:     ( 1.375rem, 2rem, 0 ),    // H1
+    h2:     ( 1rem, 1.25rem, 0 ),     // H2
+    h3:     ( 1rem, 1.25rem, 0 ),     // H3
+    h4:     ( 1rem, 1.25rem, 0 ),     // H4
+    t-s:    ( .8125rem, 1.25rem, 0 ), // Text Small
+    t-r:    ( .75rem, 1.25rem, 0 ),   // Text Regular
+    t-l:    ( .875rem, 1.25rem, 0 )   // Text Large
+  )
+);
+
+// FONT-WEIGHT
+// ----------------------------------------
+//
+$font-weight: (
+  regular: 400,
+  bold:    700
+);
+
+
+

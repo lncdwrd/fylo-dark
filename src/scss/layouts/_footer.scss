@@ -1,0 +1,125 @@
+.footer {
+  position: relative;
+  padding: 12.5rem 0 5.75rem 0;
+  background-color: color(primary, 3);
+
+  &-logo {
+    width: 176px;
+    height: 100%;
+    margin-bottom: 1.75rem;
+  }
+
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-column {
+    &:nth-child(1) {
+      width: 30%;
+    }
+  }
+
+  &-info {
+    &-wrapper {
+      display: grid;
+      grid-template-columns: 1.125rem 1fr;
+      column-gap: 1.625rem;
+
+      &:nth-child(1) {
+        margin-bottom: 1.25rem;
+      }
+    }
+
+    &-icon {
+      margin: .25rem 1.625rem 0 0;
+    }
+  }
+
+  .nav {
+    &-item:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &-social {
+    &-wrapper {
+      display: flex;
+    }
+
+    .path {
+      @include transition(icon);
+      fill: color(neutral, 1);
+    }
+
+    .circle-stroke {
+      @include transition(icon);
+      stroke: color(neutral, 1);
+    }
+
+    &-link:hover .path {
+      fill: color(accent, 1);
+    }
+
+    &-link:hover .circle-stroke {
+      stroke: color(accent, 1);
+    }
+
+    &-link:not(:last-child) {
+      margin-right: .75rem;
+    }
+  }
+
+  &-attribution {
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    & a {
+      color: color(accent, 2);
+    }
+  }
+
+  @include breakpoint-down(mobile) {
+    padding: 14.125rem 0 5rem 0;
+
+    &-logo {
+      margin-bottom: 2.5rem;
+    }
+
+    &-wrapper {
+      flex-direction: column;
+    }
+
+    &-column {
+      &:nth-child(1) {
+        width: 100%;
+      }
+  
+      &:nth-child(2) {
+        margin-bottom: 5rem;
+      }
+
+      &:nth-child(3) {
+        margin-bottom: 1rem;
+      }
+
+      &:nth-child(4) {
+        margin-bottom: 4.25rem;
+      }
+    }
+
+    &-social {
+      &-wrapper {
+        justify-content: center;
+      }
+    }
+
+    &-attribution {
+      bottom: 2%;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

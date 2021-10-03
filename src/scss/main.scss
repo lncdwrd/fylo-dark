@@ -1,0 +1,24 @@
+/* --- MAIN SCSS FILE --- */
+
+/*** ABSTRACTS ***/
+@import "abstracts/variables",
+        "abstracts/functions",
+        "abstracts/mixins";
+        
+/*** BASE ***/
+@import "base/resets",
+        "base/typography";
+
+/*** COMPONENTS ***/
+@import "components/buttons";
+
+/*** LAYOUTS ***/
+@import "layouts/main",
+        "layouts/grid",
+        "layouts/header",
+        "layouts/footer",
+        "layouts/testimonials",
+        "layouts/forms";
+
+/*** PAGES ***/
+@import "pages/home";
